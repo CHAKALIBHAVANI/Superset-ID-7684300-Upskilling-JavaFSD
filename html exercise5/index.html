@@ -1,0 +1,107 @@
+<!--Event Registration Form-->
+<!-- ==================================================
+    Local Zaheerabad Community Event Registration Form
+    ================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local[zaheerabad] Event Registration</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eef6f3;
+        }
+
+        .entryPanel {
+            width: 430px;
+            margin: 35px auto;
+            padding: 22px;
+            background-color: white;
+            border-left: 6px solid darkgreen;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 7px 0 14px 0;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        output {
+            display: block;
+            margin-top: 15px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="entryPanel">
+
+        <h2>Local[zaheerabad] Community Event Registration</h2>
+
+        <form onsubmit="saveEntry(event)">
+
+            <label for="citizenName">Name</label>
+            <input type="text"
+                id="citizenName"
+                placeholder="Enter resident name"
+                required
+                autofocus>
+
+            <label for="citizenMail">Email</label>
+            <input type="email"
+                id="citizenMail"
+                placeholder="Enter email address"
+                required>
+
+            <label for="programDate">Date</label>
+            <input type="date"
+                id="programDate"
+                required>
+
+            <label for="programType">Event Type</label>
+            <select id="programType" required>
+                <option value="">Select one event</option>
+                <option>Health Camp</option>
+                <option>Sports Meet</option>
+                <option>Cultural Program</option>
+                <option>Tree Plantation Drive</option>
+            </select>
+
+            <label for="extraNote">Message</label>
+            <textarea id="extraNote"
+                    rows="4"
+                    placeholder="Enter your message"></textarea>
+
+            <button type="submit">Register Event</button>
+
+            <output id="displayResult"></output>
+
+        </form>
+
+    </div>
+
+    <script>
+        function saveEntry(event) {
+            event.preventDefault();
+
+            let person = document.getElementById("citizenName").value;
+            let activity = document.getElementById("programType").value;
+
+            document.getElementById("displayResult").value =
+                "Hello " + person + ", your registration for " + activity + " is confirmed.";
+        }
+    </script>
+
+</body>
+</html>

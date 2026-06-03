@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local[zaheerabad] Event Feedback</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f5f9ff;
+        }
+
+        .feedbackSection{
+            width:450px;
+            margin:auto;
+            padding:20px;
+            background-color:white;
+            border:2px solid navy;
+        }
+
+        input, select, textarea, button{
+            width:100%;
+            padding:8px;
+            margin-top:6px;
+            margin-bottom:12px;
+        }
+
+        #eventPicture{
+            width:180px;
+            height:120px;
+            border:3px solid green;
+            display:block;
+            margin:auto;
+        }
+
+        .zoomImage{
+            width:300px !important;
+            height:200px !important;
+        }
+
+        .messageText{
+            font-weight:bold;
+            color:darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="feedbackSection">
+
+        <h2>Local[zaheerabad] Community Event Feedback</h2>
+
+        <p>
+            Residents can share event feedback and community suggestions.
+        </p>
+
+        <!-- Phone Number Field -->
+
+        <label>Phone Number</label>
+
+        <input type="text"
+            id="contactNumber"
+            placeholder="Enter phone number"
+            onblur="validatePhone()">
+
+        <p id="phoneResult"></p>
+
+        <!-- Event Selection -->
+
+        <label>Select Event</label>
+
+        <select id="eventSelect"
+                onchange="showEventFee()">
+
+            <option value="">Choose Event</option>
+
+            <option value="Free">
+                Cultural Program
+            </option>
+
+            <option value="50">
+                Sports Meet
+            </option>
+
+            <option value="20">
+                Health Camp
+            </option>
+
+            <option value="30">
+                Tree Plantation
+            </option>
+
+        </select>
+
+        <p class="messageText" id="feeDisplay"></p>
+
+        <!-- Feedback Message -->
+
+        <label>Feedback Message</label>
+
+        <textarea id="feedbackArea"
+                rows="4"
+                placeholder="Enter feedback here"
+                onkeyup="countCharacters()"></textarea>
+
+        <p>
+            Characters Count:
+            <span id="totalCharacters">0</span>
+        </p>
+
+        <!-- Event Image -->
+
+        <p>Double click the image to enlarge it.</p>
+
+        <img src="event1.jpg"
+            id="eventPicture"
+            alt="Community Event"
+            title="Double click image"
+            ondblclick="enlargePhoto()">
+
+        <br>
+
+        <!-- Submit Button -->
+
+        <button onclick="submitFeedback()">
+            Submit Feedback
+        </button>
+
+        <p class="messageText" id="submitMessage"></p>
+
+    </div>
+
+    <script>
+
+        function validatePhone()
+        {
+            let numberValue =
+                document.getElementById("contactNumber").value;
+
+            if(numberValue.length == 10)
+            {
+                document.getElementById("phoneResult").innerHTML =
+                "Valid phone number";
+            }
+            else
+            {
+                document.getElementById("phoneResult").innerHTML =
+                "Enter a 10 digit number";
+            }
+        }
+
+        function showEventFee()
+        {
+            let feeValue =
+                document.getElementById("eventSelect").value;
+
+            document.getElementById("feeDisplay").innerHTML =
+            "Selected Event Fee: ₹" + feeValue;
+        }
+
+        function submitFeedback()
+        {
+            document.getElementById("submitMessage").innerHTML =
+            "Feedback submitted successfully";
+        }
+
+        function enlargePhoto()
+        {
+            document.getElementById("eventPicture")
+            .classList.toggle("zoomImage");
+        }
+
+        function countCharacters()
+        {
+            let textLength =
+                document.getElementById("feedbackArea").value.length;
+
+            document.getElementById("totalCharacters").innerHTML =
+            textLength;
+        }
+
+    </script>
+
+</body>
+</html>

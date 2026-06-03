@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> “Find Nearby Events”</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f8ff;
+            text-align: center;
+        }
+
+        .locationCard{
+            width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid navy;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #locationInfo{
+            margin-top: 20px;
+            font-weight: bold;
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="locationCard">
+
+        <h2>Welcome to the Local[zaheerabad] Community Event Portal</h2>
+
+        <p>
+            Residents can find nearby community events using their current location.
+        </p>
+
+        <h3>Geolocation for Event Mapping</h3>
+
+        <p>
+            Click the button below to display your current coordinates.
+        </p>
+
+        <button onclick="locateEvent()">
+            Find Nearby Events
+        </button>
+
+        <p id="locationInfo"></p>
+
+    </div>
+
+    <script>
+
+        function locateEvent()
+        {
+            if(navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(
+                    showCoordinates,
+                    locationError,
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 0
+                    }
+                );
+            }
+            else
+            {
+                document.getElementById("locationInfo").innerHTML =
+                "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showCoordinates(position)
+        {
+            let userLatitude = position.coords.latitude;
+            let userLongitude = position.coords.longitude;
+
+            document.getElementById("locationInfo").innerHTML =
+            "Latitude : " + userLatitude +
+            "<br>Longitude : " + userLongitude;
+        }
+
+        function locationError(error)
+        {
+            if(error.code == error.PERMISSION_DENIED)
+            {
+                document.getElementById("locationInfo").innerHTML =
+                "Location permission denied by user.";
+            }
+            else if(error.code == error.TIMEOUT)
+            {
+                document.getElementById("locationInfo").innerHTML =
+                "Location request timed out.";
+            }
+            else
+            {
+                document.getElementById("locationInfo").innerHTML =
+                "Unable to retrieve location.";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!-- zaheerabad is used in the form of local --><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local[zaheerabad] Event Preferences</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f8ff;
+        }
+
+        .prefBox {
+            width: 420px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid navy;
+            background-color: white;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 12px;
+        }
+
+        #prefMsg {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body onload="loadChoice()">
+
+    <div class="prefBox">
+
+        <h2>Local[zaheerabad] Event Preference</h2>
+
+        <p>Select your preferred event type.</p>
+
+        <select id="eventChoice" onchange="saveChoice()">
+            <option value="">Choose Event</option>
+            <option value="Cultural Program">Cultural Program</option>
+            <option value="Sports Meet">Sports Meet</option>
+            <option value="Health Camp">Health Camp</option>
+            <option value="Tree Plantation">Tree Plantation</option>
+        </select>
+
+        <button onclick="clearChoice()">Clear Preferences</button>
+
+        <p id="prefMsg"></p>
+
+    </div>
+
+    <script>
+        function saveChoice() {
+            let selectedEvent = document.getElementById("eventChoice").value;
+
+            localStorage.setItem("savedEvent", selectedEvent);
+            sessionStorage.setItem("currentEvent", selectedEvent);
+
+            document.getElementById("prefMsg").innerHTML =
+                "Preference saved: " + selectedEvent;
+        }
+
+        function loadChoice() {
+            let oldEvent = localStorage.getItem("savedEvent");
+
+            if (oldEvent) {
+                document.getElementById("eventChoice").value = oldEvent;
+
+                document.getElementById("prefMsg").innerHTML =
+                    "Welcome back! Your saved event is: " + oldEvent;
+            }
+        }
+
+        function clearChoice() {
+            localStorage.clear();
+            sessionStorage.clear();
+
+            document.getElementById("eventChoice").value = "";
+            document.getElementById("prefMsg").innerHTML =
+                "All preferences cleared.";
+        }
+    </script>
+
+</body>
+</html>

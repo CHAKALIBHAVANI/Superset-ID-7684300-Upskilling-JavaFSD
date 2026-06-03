@@ -1,0 +1,71 @@
+<!-- zaheerabad is used in the form of local -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local[zaheerabad] Event Video Invite</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f8ff;
+        }
+
+        .videoPanel{
+            margin-top: 30px;
+        }
+
+        #statusMessage{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="videoPanel">
+
+          <h1>Welcome to the LOCAL[ZAHEERABAD] COMMUNITY EVENT PORTAL</h1>
+
+        <p>
+            Watch the event invitation video below.
+        </p>
+
+        <h3>Video Invite with Media Events</h3>
+
+        
+
+        <video id="communityVideo"
+               width="500"
+               controls
+               oncanplay="videoStatus()">
+
+            <source src="inviteVideo.mp4" type="video/mp4">
+
+            Video is not supported by your browser.
+
+        </video>
+
+        <p id="statusMessage"></p>
+
+    </div>
+
+    <script>
+
+        function videoStatus()
+        {
+            document.getElementById("statusMessage").innerHTML =
+            "Video ready to play";
+        }
+
+        window.onbeforeunload = function()
+        {
+            return "Are you sure you want to leave this page?";
+        };
+
+    </script>
+
+</body>
+</html>

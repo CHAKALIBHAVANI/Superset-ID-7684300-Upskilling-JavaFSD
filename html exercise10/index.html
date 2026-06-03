@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local[zaheerabad] Debugging Practice</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f8ff;
+        }
+
+        .debugBox{
+            width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid navy;
+            background-color: white;
+        }
+
+        button{
+            padding: 10px 20px;
+        }
+
+        #resultText{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="debugBox">
+
+        <h2>Welcome to the Local Community Event Portal</h2>
+
+        <p>
+            This page is used for Chrome DevTools debugging practice.
+        </p>
+
+        <button onclick="checkVisitors()">
+            Check Visitors
+        </button>
+
+        <p id="resultText"></p>
+
+    </div>
+
+    <script>
+
+        function checkVisitors()
+        {
+            let totalVisitors = 150;
+            let registeredUsers = 95;
+
+            console.log("Visitors:", totalVisitors);
+            console.log("Registered Users:", registeredUsers);
+
+            let availableSeats =
+                totalVisitors - registeredUsers;
+
+            document.getElementById("resultText").innerHTML =
+                "Available Seats: " + availableSeats;
+        }
+
+    </script>
+
+</body>
+</html>
