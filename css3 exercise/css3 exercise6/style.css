@@ -1,0 +1,127 @@
+/* Page background and font */
+body {
+
+    background-color: #eef5fb;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 40px;
+}
+
+
+
+/* Main content box */
+.container {
+
+    width: 70%;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+}
+
+
+
+/* Main heading style */
+h1 {
+
+    color: #003366;
+
+    text-align: center;
+}
+
+
+
+/* Navigation menu style */
+.nav-menu {
+
+    list-style-type: none;
+
+    padding: 0;
+
+    margin-top: 20px;
+}
+
+
+
+/* Navigation menu items spacing */
+.nav-menu li {
+
+    display: inline-block;
+
+    margin-right: 20px;
+}
+
+
+
+/* Normal link style */
+a:link {
+
+    color: #0077b6;
+
+    text-decoration: none;
+}
+
+
+
+/* Visited link color */
+a:visited {
+
+    color: #5a189a;
+}
+
+
+
+/* Mouse hover effect */
+a:hover {
+
+    color: #d62828;
+
+    text-decoration: underline;
+}
+
+
+
+/* Active link color */
+a:active {
+
+    color: #ff8800;
+}
+
+
+
+/* Section heading style */
+h2 {
+
+    margin-top: 30px;
+
+    color: #0077b6;
+}
+
+
+
+/* Event list style */
+.event-list {
+
+    list-style-type: square;
+
+    list-style-position: inside;
+
+    margin-top: 15px;
+}
+
+
+
+/* Space between list items */
+.event-list li {
+
+    padding: 8px;
+
+    margin-bottom: 5px;
+}

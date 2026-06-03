@@ -1,0 +1,137 @@
+/* =====================================================
+   PAGE BACKGROUND STYLE
+   Adds background color and common page font
+   ===================================================== */
+
+body {
+
+    background-color: #eef5fb;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 20px;
+}
+
+
+/* =====================================================
+   MAIN CONTENT BOX
+   Controls page width and spacing
+   ===================================================== */
+
+.container {
+
+    width: 80vw;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 3vh;
+}
+
+
+/* =====================================================
+   MAIN PORTAL HEADING
+   Styles the website title
+   ===================================================== */
+
+h1 {
+
+    text-align: center;
+
+    color: #003366;
+}
+
+
+/* =====================================================
+   DESKTOP MENU STYLE
+   In desktop screen links display horizontally
+   Example:
+   Home  Events  Programs  Contact
+   ===================================================== */
+
+.menu {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin: 20px 0;
+}
+
+
+/* =====================================================
+   NAVIGATION LINK STYLE
+   Removes underline and changes text color
+   ===================================================== */
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #0077b6;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVE IMAGE STYLE
+   Image adjusts automatically to screen size
+   ===================================================== */
+
+img {
+
+    width: 100%;
+
+    max-height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE STYLE
+   In phone/tablet screen links display vertically press ctrl shift+I and ctrl shift+M
+   Example:
+   Home
+   Events
+   Programs
+   Contact
+
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Menu becomes vertical in mobile view */
+    .menu {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    /* Smaller heading for phones */
+    h1 {
+
+        font-size: 24px;
+    }
+
+    /* Smaller menu text */
+    .menu a {
+
+        font-size: 16px;
+    }
+
+    /* Smaller image height for mobile */
+    img {
+
+        max-height: 200px;
+    }
+}

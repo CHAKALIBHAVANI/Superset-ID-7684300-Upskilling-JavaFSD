@@ -1,0 +1,57 @@
+/* Background image with fallback color */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: #d8ecf8;
+
+    background-image: url("community-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main content area with RGBA background */
+.portal-container {
+    width: 75%;
+    margin: 40px auto;
+    padding: 20px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 10px;
+}
+
+
+/* Main portal heading using HEX color */
+h1 {
+    color: #003366;
+    text-align: center;
+}
+
+
+/* Event section styling */
+.event-card {
+    margin-top: 20px;
+}
+
+
+/* Gradient header styling */
+h2 {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+
+    color: white;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+
+/* Event description text using RGBA */
+p {
+    color: rgba(30, 30, 30, 0.9);
+
+    font-size: 16px;
+    line-height: 1.5;
+}

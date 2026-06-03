@@ -1,0 +1,29 @@
+/* Defines the overall appearance of the page,
+   including background color and font family */
+body {
+    background-color: #f3f7fb;
+    font-family: Verdana, sans-serif;
+}
+
+
+/* Creates a dedicated section to hold
+   the event portal content */
+.portal-section {
+    margin: 40px;
+}
+
+
+/* Styles the main title shown at the
+   top of the Community Event Portal */
+.portal-title {
+    color: #24527a;
+}
+
+
+/* Formats the descriptive information
+   displayed below the portal heading */
+.portal-info {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+}

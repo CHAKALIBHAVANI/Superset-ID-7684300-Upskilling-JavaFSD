@@ -1,0 +1,99 @@
+/* =====================================================
+   PAGE FONT AND BACKGROUND STYLING
+   Applies font family, spacing,
+   and page background color
+   ===================================================== */
+
+body {
+
+    background-color: #eef4f8;
+
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+
+    padding: 40px;
+}
+
+
+
+/* =====================================================
+   MAIN CONTENT CONTAINER
+   Creates centered layout section
+   for portal information
+   ===================================================== */
+
+.container {
+
+    width: 70%;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+}
+
+
+
+/* =====================================================
+   MAIN PORTAL HEADING STYLING
+   Styles heading alignment,
+   spacing, size and weight
+   ===================================================== */
+
+h1 {
+
+    color: #003366;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+
+
+/* =====================================================
+   EVENT TITLE TYPOGRAPHY
+   Applies font size, color,
+   italic style and weight
+   ===================================================== */
+
+h2 {
+
+    color: #0077b6;
+
+    font-size: 26px;
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+
+/* =====================================================
+   DESCRIPTION TEXT FORMATTING
+   Improves readability using
+   spacing and text alignment
+   ===================================================== */
+
+p {
+
+    color: #444444;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+}
+

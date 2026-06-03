@@ -1,0 +1,95 @@
+/* Page background and font */
+body {
+
+    background-color: #eef5fb;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 40px;
+}
+
+
+
+/* Main content section */
+.container {
+
+    width: 70%;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 25px;
+}
+
+
+
+/* Event card styling */
+.eventCard {
+
+    border: 2px solid #0077b6;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    background-color: #e8f4fc;
+}
+
+
+
+/* Event heading */
+h2 {
+
+    color: #003366;
+}
+
+
+
+/* Input field styling */
+input {
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    border: 1px solid gray;
+}
+
+
+
+/* Outline effect when selected */
+input:focus {
+
+    outline: 3px solid #0077b6;
+}
+
+
+
+/* Visibility hidden example */
+.hiddenBox {
+
+    visibility: hidden;
+
+    background-color: lightgray;
+
+    margin-top: 20px;
+
+    padding: 10px;
+}
+
+
+
+/* Display none example */
+.noneBox {
+
+    display: none;
+
+    background-color: lightgray;
+
+    margin-top: 20px;
+
+    padding: 10px;
+}

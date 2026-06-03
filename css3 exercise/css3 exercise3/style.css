@@ -1,0 +1,38 @@
+/* Universal selector removes default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ID selector styles the main header banner */
+#mainHeader {
+    background-color: #2b5d7c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Element selector styles all h2 headings */
+h2 {
+    color: #2b5d7c;
+    margin: 20px;
+}
+
+
+/* Class selector styles each event card */
+.eventCard {
+    background-color: #f2f7fa;
+    border: 1px solid #c9dce8;
+    margin: 15px 20px;
+    padding: 12px;
+}
+
+
+/* Grouping selector styles h3 and paragraph text together */
+h3,
+p {
+    color: #333333;
+    margin-bottom: 8px;
+}

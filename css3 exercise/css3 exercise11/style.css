@@ -1,0 +1,76 @@
+/* Page style used to check whether CSS is loaded */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef5fb;
+}
+
+
+/* Main box used for layout testing */
+.portal-box {
+    width: 70%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #0077b6;
+}
+
+
+/* Main heading style for inspection */
+h1 {
+    color: #003366;
+    text-align: center;
+}
+
+
+/* Event card used to test spacing and layout */
+.event-card {
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #e8f4fc;
+}
+
+
+/* Media query used to test smaller screens */
+@media screen and (max-width: 768px) {
+
+    /* Box becomes wider on mobile */
+    .portal-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    /* Heading size becomes smaller */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Card text becomes easier to read */
+    .event-card {
+        font-size: 15px;
+    }
+    /* Small instruction text */
+.info-text {
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+/* Instruction text styling */
+.instruction {
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+
+    font-style: italic;
+}
+}
